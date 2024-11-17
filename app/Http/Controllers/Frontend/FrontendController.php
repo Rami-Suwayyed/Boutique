@@ -12,7 +12,7 @@ class FrontendController extends Controller
     public function index()
     {
         $product_categories = ProductCategory::whereStatus(1)->whereNull('parent_id')->get();
-        return view('frontend.index', compact('product_categories'));
+        return view('frontend.index', compact(var_name: 'product_categories'));
     }
 
     public function shop($slug = null)
